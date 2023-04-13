@@ -1,23 +1,23 @@
 This code uses the OpenCV library to process a video file, slow down its playback speed, and save it as a new video file. Here are the steps involved in using this code:
 
-Import the necessary libraries:
+**Import the necessary libraries:**
 
-import cv2
-import os
-The code uses OpenCV (cv2) to process the video frames and the os library to create directories and manage files.
+_import cv2
+import os_
+**The code uses OpenCV (cv2) to process the video frames and the os library to create directories and manage files.**
 
 Define the input video filename, output filename, and framerate:
 makefile
 
-input_filename = '4.mp4'
+_input_filename = '4.mp4'
 output_filename = 'timelapse_slowed_down.mp4'
-output_fps = 60
-The input_filename is the name of the video file that you want to process. The output_filename is the name of the new video file that will be created. The output_fps is the frame rate of the new video file.
+output_fps = 60_
+**The input_filename is the name of the video file that you want to process. The output_filename is the name of the new video file that will be created. The output_fps is the frame rate of the new video file.**
 
 Create a new directory to store the output JPEG images:
-
+_
 output_folder = 'timelapse_frames_{}'.format(os.getpid())
-os.makedirs(output_folder)
+os.makedirs(output_folder)_
 The code creates a new directory with a unique name (os.getpid()) to store the JPEG images that will be extracted from the video.
 
 Open the input video file:
